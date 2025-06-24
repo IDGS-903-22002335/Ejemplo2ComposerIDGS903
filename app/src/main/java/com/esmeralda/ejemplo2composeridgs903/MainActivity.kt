@@ -29,21 +29,27 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.esmeralda.ejemplo2composeridgs903.ui.theme.Ejemplo2ComposerIDGS903Theme
+import org.w3c.dom.Text
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-           val navController = rememberNavController()
+            SumaDosNumeros()
+         /*  val navController = rememberNavController()
             NavHost(navController = navController, startDestination = "inicio"){
                 composable("inicio"){PantallaInicio(navController)}
                 composable("detalle/{nombre}"){backStackEntry ->
                     val nombre = backStackEntry.arguments?.getString("nombre") ?: "Invitado"
                     PantallaDetalle(navController, nombre)
+
+
+
+
                 }
             }
-
+*/
         }
     }
 }
